@@ -1,84 +1,77 @@
+import { Link } from 'react-router-dom'
+
+const values = [
+  ['Accuracy', 'Automated calculations reduce errors in totals, grades, averages, and positions.'],
+  ['Accessibility', 'Responsive online access keeps results available to authorized users on any device.'],
+  ['Security', 'Role-based access protects confidential student and school information.'],
+]
+
 const About = () => {
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans">
-      {/* Header / Hero Section */}
-      <section className="bg-white border-b border-[#E2E8F0] py-16 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-extrabold text-[#0F172A] tracking-tight mb-4">
-            About <span className="text-[#2563EB]">School Result Portal</span>
-          </h1>
-          <p className="text-[#64748B] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Empowering educational institutions, students, and parents with seamless, transparent, and secure digital academic records management.
+    <main className="flex-1 bg-[#F8FAFC]">
+      <section className="border-b border-[#E2E8F0] bg-white">
+        <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
+          <p className="text-sm font-semibold text-[#2563EB]">ABOUT THE PORTAL</p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-[#0F172A] sm:text-5xl">Better tools for better academic decisions</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#64748B] sm:text-lg">
+            School Result Portal replaces slow, error-prone result processes with a secure and reliable web application for the whole school community.
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-12 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-        <div className="bg-white p-8 rounded-lg shadow-sm border border-[#E2E8F0] hover:shadow-md transition-shadow">
-          <div className="w-12 h-12 bg-blue-50 text-[#2563EB] border border-blue-100 rounded-md flex items-center justify-center mb-4 text-2xl font-bold">
-            🎯
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <p className="text-sm font-semibold text-[#2563EB]">OUR PURPOSE</p>
+            <h2 className="mt-3 text-3xl font-bold text-[#0F172A]">Make result management efficient and dependable</h2>
+            <p className="mt-5 leading-7 text-[#64748B]">
+              Many schools still rely on paper records and spreadsheets. This makes computation time-consuming, retrieval difficult, publication delayed, and sensitive information harder to protect.
+            </p>
+            <p className="mt-4 leading-7 text-[#64748B]">
+              Our portal brings student records, score entry, automated grading, approval, reporting, and result access into one consistent system.
+            </p>
+            <Link to="/contact" className="mt-7 inline-flex rounded-lg bg-[#2563EB] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1D4ED8]">
+              Talk to the team
+            </Link>
           </div>
-          <h2 className="text-2xl font-bold text-[#0F172A] mb-3">Our Mission</h2>
-          <p className="text-[#64748B] leading-relaxed">
-            To eliminate administrative delays and record inaccuracies by providing a fast, reliable, and accessible result compilation platform for schools everywhere.
-          </p>
-        </div>
-
-        <div className="bg-white p-8 rounded-lg shadow-sm border border-[#E2E8F0] hover:shadow-md transition-shadow">
-          <div className="w-12 h-12 bg-blue-50 text-[#2563EB] border border-blue-100 rounded-md flex items-center justify-center mb-4 text-2xl font-bold">
-            👁️
-          </div>
-          <h2 className="text-2xl font-bold text-[#0F172A] mb-3">Our Vision</h2>
-          <p className="text-[#64748B] leading-relaxed">
-            To become the leading digital result processing standard across secondary and tertiary institutions, fostering transparency and instant reporting.
-          </p>
-        </div>
-      </section>
-
-      {/* Key Features / What We Offer */}
-      <section className="py-12 bg-white border-y border-[#E2E8F0]">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-[#0F172A] mb-10">
-            Why Choose Our Platform?
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] hover:border-blue-200 transition-colors">
-              <h3 className="font-bold text-[#0F172A] text-lg mb-2">⚡ Instant Access</h3>
-              <p className="text-[#64748B] text-sm leading-relaxed">
-                Students can view and download term or semester results immediately after publication.
-              </p>
-            </div>
-            <div className="p-6 rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] hover:border-blue-200 transition-colors">
-              <h3 className="font-bold text-[#0F172A] text-lg mb-2">🔒 Secure & Tamper-Proof</h3>
-              <p className="text-[#64748B] text-sm leading-relaxed">
-                Advanced data privacy protocols guarantee that student records remain confidential and authentic.
-              </p>
-            </div>
-            <div className="p-6 rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] hover:border-blue-200 transition-colors">
-              <h3 className="font-bold text-[#0F172A] text-lg mb-2">📊 Analytics & PDF Reports</h3>
-              <p className="text-[#64748B] text-sm leading-relaxed">
-                Comprehensive performance visualizer with one-click official PDF report downloads.
-              </p>
-            </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {[
+              ['Administrators', 'Manage users, classes, subjects, sessions, and result approval.'],
+              ['Teachers', 'Record assessment and examination scores for assigned classes.'],
+              ['Students', 'View results, academic history, and downloadable report cards.'],
+              ['Parents', 'Monitor a child’s academic progress in a future portal release.'],
+            ].map(([title, description], index) => (
+              <article key={title} className={`rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm ${index % 2 ? 'sm:translate-y-5' : ''}`}>
+                <span className="grid size-9 place-items-center rounded-lg bg-blue-50 text-sm font-bold text-[#2563EB]">{index + 1}</span>
+                <h3 className="mt-4 font-bold text-[#0F172A]">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[#64748B]">{description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Development Team Section */}
-      <section className="py-16 px-6 max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#0F172A] mb-3">
-          Built by DevCore 7-Innovators
-        </h2>
-        <p className="text-[#64748B] max-w-xl mx-auto mb-8 text-sm md:text-base leading-relaxed">
-          Engineered as part of the 3MTT Capstone project to modernize academic record management.
-        </p>
-        <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#2563EB] text-white rounded-md text-sm font-medium shadow-sm">
-          <span>🚀 Capstone Project 7</span>
+      <section className="border-y border-[#E2E8F0] bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-[#0F172A]">What guides the product</h2>
+            <p className="mt-4 text-[#64748B]">Every feature is designed around trustworthy records and a clear user experience.</p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {values.map(([title, description]) => (
+              <article key={title} className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-6">
+                <div className="flex items-center gap-3">
+                  <span className="size-2.5 rounded-full bg-[#2563EB]" />
+                  <h3 className="text-lg font-bold text-[#0F172A]">{title}</h3>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-[#64748B]">{description}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
-    </div>
-  );
-};
+    </main>
+  )
+}
 
-export default About;
+export default About
